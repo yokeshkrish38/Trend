@@ -1,60 +1,131 @@
-Trend Application – DevOps CI/CD Deployment
-Project Overview
+📌 Trend Application – DevOps CI/CD Capstone Project
+🚀 Project Overview
 
-React application deployed in a production-ready cloud environment using Docker, Kubernetes, Jenkins CI/CD and monitoring.
+This project demonstrates a complete production-style DevOps workflow for deploying a React application using:
 
-Tech Stack
+Infrastructure as Code (Terraform)
 
-GitHub for version control
+Containerization (Docker)
 
-Docker & DockerHub
+CI/CD automation with Jenkins
 
-Jenkins CI/CD
+Kubernetes orchestration on Amazon Web Services
 
-AWS EKS (Kubernetes)
+Monitoring using Prometheus and Grafana
 
-Prometheus & Grafana
+Source control using GitHub
 
-Infrastructure
+🧱 Tech Stack
+Layer	Tools
+Version Control	GitHub
+Infrastructure	Terraform, AWS
+CI/CD	Jenkins
+Container	Docker, DockerHub
+Orchestration	Kubernetes (EKS)
+Monitoring	Prometheus, Grafana
+☁ Infrastructure Provisioning (Terraform)
 
-AWS EC2 for Jenkins
+Terraform is used to provision:
 
-AWS EKS cluster for application
+VPC & Subnet
 
-LoadBalancer service for public access
+Security Group
 
-CI/CD Pipeline Flow
+EC2 instance for Jenkins
+
+Terraform Workflow
+terraform init
+terraform plan
+terraform apply
+
+
+This automatically creates cloud infrastructure instead of manual provisioning.
+
+⚙ Jenkins CI/CD Pipeline Flow
 
 Code pushed to GitHub
 
-Jenkins builds Docker image
+Jenkins triggered automatically via webhook
+
+Docker image built
 
 Image pushed to DockerHub
 
-Kubernetes deployment updated automatically
+Kubernetes deployment updated on AWS EKS
 
-Webhook triggers pipeline on every commit.
+Pipeline is fully automated on every commit.
+🐳 Docker
 
-Kubernetes
+Application containerized using Dockerfile
 
-deployment.yaml for pods
+Production build served via Nginx
 
-service.yaml for LoadBalancer exposure
+Jenkins handles automated image creation and push
 
-Monitoring
+☸ Kubernetes (AWS EKS)
 
-Prometheus metrics
+Resources used:
 
-Grafana dashboards
+deployment.yaml → application pods
 
-Screenshots Included
+service.yaml → LoadBalancer exposure
 
-Jenkins pipeline success
+Application is publicly accessible using AWS LoadBalancer.
 
-DockerHub image
+📊 Monitoring
 
-Kubernetes pods & service
+Monitoring stack includes:
 
-Grafana dashboard
+Prometheus for metrics collection
 
-Live application
+Grafana for visualization
+
+PVC storage managed using AWS EBS CSI driver.
+
+🌐 Live Application
+
+Application is exposed using Kubernetes LoadBalancer service on AWS.
+
+📸 Screenshots Included
+
+Jenkins pipeline successful execution
+
+DockerHub image repository
+
+Kubernetes pods & services
+
+Grafana monitoring dashboard
+
+Live application in browser
+
+📁 Project Structure
+Trend/
+ ├── Dockerfile
+ ├── Jenkinsfile
+ ├── deployment.yaml
+ ├── service.yaml
+ ├── dist/
+ ├── README.md
+
+terraform/
+ └── main.tf
+
+✅ Key Achievements
+
+✔ Infrastructure automated using Terraform
+✔ End-to-end CI/CD pipeline
+✔ Auto deployment on Kubernetes
+✔ Monitoring enabled
+✔ Cloud production workflow
+
+🏁 Conclusion
+
+This project implements a complete DevOps lifecycle from infrastructure provisioning to automated application deployment and monitoring in a cloud-native environment.
+
+📌 Tools Used
+
+Terraform | AWS | Docker | Jenkins | Kubernetes | Prometheus | Grafana | GitHub
+
+🎯 Author
+
+Capstone Project – DevOps Engineering
