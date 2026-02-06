@@ -3,12 +3,6 @@ pipeline {
 
   stages {
 
-    stage('Clone Repo') {
-      steps {
-        git 'https://github.com/yokeshkrish38/Trend.git'
-      }
-    }
-
     stage('Build Docker Image') {
       steps {
         sh 'docker build -t krish96/trend-app:latest .'
